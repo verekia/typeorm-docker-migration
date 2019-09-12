@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - ./.data/postgres:/var/lib/postgresql/data
+    ports:
+      - '8432:5432'
+    networks:
+      - test-net
+
+networks:
+  test-net:
+    name: test-net
