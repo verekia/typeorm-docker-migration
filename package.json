@@ -1,10 +1,15 @@
 {
   "scripts": {
-    "start": "ts-node .",
-    "show": "ts-node ./node_modules/typeorm/cli.js migration:show",
-    "migrate": "ts-node ./node_modules/typeorm/cli.js migration:run"
+    "show-dev": "ts-node scripts showDev",
+    "show-staging": "ts-node scripts showStaging",
+    "show-prod": "ts-node scripts showProd",
+    "migrate-dev": "ts-node scripts migrateDev",
+    "migrate-staging": "ts-node scripts migrateStaging",
+    "migrate-prod": "ts-node scripts migrateProd"
   },
   "dependencies": {
+    "@sharyn/commands": "^1.1.2",
+    "@sharyn/scripts": "^1.5.2",
     "dotenv": "^8.1.0",
     "pg": "^7.12.1",
     "reflect-metadata": "^0.1.13",
